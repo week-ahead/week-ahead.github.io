@@ -1,0 +1,171 @@
+.body{
+  background-color: #fefefe;
+}
+
+button{
+  background-color: #222222;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  list-style: none;
+  height: 10%;
+  text-decoration: none;
+  transition: color 100ms;
+  user-select: none;
+  padding-top: 5px;
+  padding-bottom:5px;
+}
+
+.toggle {
+  height:100%;
+  width:60%;
+  margin-left: 5%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  text-align:center;
+  margin-right: 5%;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  color: #000000;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+.toggle:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+#invis:hover{
+  background-image: linear-gradient(rgb(0 0 0/0%) 0 0);
+}
+
+.left_arrow_btn{
+  height:100%;
+  width:16%;
+  margin-left: 5%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
+}
+
+.left_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+.right_arrow_btn{
+  height:100%;
+  width:16%;
+  margin-right: 5%;
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+  flex-grow:4;
+  flex-shrink:1;
+  text-align:center
+}
+
+.right_arrow_btn:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+h1 {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+  text-align: center
+}
+
+h2 {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-align: center
+}
+
+#daytext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+#gradetext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+#housetext{
+  height:100%;
+  width:80%;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+  flex-grow:10;
+  flex-shrink:2.5
+}
+
+span{
+  width:60%;
+  display:flex;
+  flex-grow:1;
+  flex-shrink: 1;
+}
+  
+.center-btn{
+  margin-top:10px;
+  margin-bottom:10px;
+  display:flex;
+}
+
+.center-tbl{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table {
+  width:95%;
+}
+
+/*OPPSETT AV TOP, TOPNAV, SIDENAV, MAIN, RIGHT OG FOOTER:*/
+
+
+#events-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 97%;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+
+#events-table td, #events-table th {
+  border: 1px solid #444444;
+  padding: 8px;
+}
+
+.firstrow {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ebebeb;
+  color: black;}
+
+.distance-from-sides {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:10px;
+}
