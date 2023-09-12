@@ -51,7 +51,7 @@ button{
   border-top-left-radius: 13px;
   flex-grow:4;
   flex-shrink:1;
-  text-align:center
+  text-align: center;
 }
 
 .left_arrow_btn:hover {
@@ -65,7 +65,7 @@ button{
   border-top-right-radius: 13px;
   flex-grow:4;
   flex-shrink:1;
-  text-align:center
+  text-align: center;
 }
 
 .right_arrow_btn:hover {
@@ -103,7 +103,7 @@ h3 {
   color: #333333;
   text-align: center;
   flex-grow:10;
-  flex-shrink:2.5
+  flex-shrink:10;
 }
 
 #gradetext{
@@ -113,7 +113,7 @@ h3 {
   color: #333333;
   text-align: center;
   flex-grow:10;
-  flex-shrink:2.5
+  flex-shrink:10
 }
 
 #housetext{
