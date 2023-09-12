@@ -47,8 +47,9 @@ button{
   height:100%;
   width:40%;
   margin-left: 5%;
+  padding: 2px;
   border-bottom-left-radius: 13px;
-  font-size: 20px;
+  font-size: 140%;
   border-top-left-radius: 13px;
   flex-grow:4;
   flex-shrink:1;
@@ -61,7 +62,8 @@ button{
 .right_arrow_btn{
   height:100%;
   width:40%;
-  font-size: 20px;
+  padding: 2px;
+  font-size: 140%;
   margin-right: 5%;
   border-bottom-right-radius: 13px;
   border-top-right-radius: 13px;
