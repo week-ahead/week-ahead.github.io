@@ -35,13 +35,7 @@ button{
   flex-shrink:2.5
 }
 
-.toggle:hover {
-  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-}
 
-#invis:hover{
-  background-image: linear-gradient(rgb(0 0 0/0%) 0 0);
-}
 
 .left_arrow_btn{
   height:100%;
