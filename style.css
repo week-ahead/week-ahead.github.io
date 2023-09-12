@@ -49,8 +49,9 @@ button{
   margin-left: 5%;
   padding: 2px;
   border-bottom-left-radius: 13px;
-  font-size: 140%;
+  font-size: 115%;
   border-top-left-radius: 13px;
+  margin: auto;
   flex-grow:4;
   flex-shrink:1;
   text-align: center;
@@ -63,7 +64,8 @@ button{
   height:100%;
   width:40%;
   padding: 2px;
-  font-size: 140%;
+  font-size: 115%;
+  margin: auto;
   margin-right: 5%;
   border-bottom-right-radius: 13px;
   border-top-right-radius: 13px;
