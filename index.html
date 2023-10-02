@@ -12,6 +12,7 @@
 </head>
 
 <body onload="load()" class="body">
+  <img src = "lion.png" style = "display:block; margin-left: auto; margin-right: auto; height: 150px; padding: 20px">
   <h1 id="h1">The Students' Week Ahead</h1>
   <h3 id="h3">By Fazl Rahman (FY-Z/S6)</h3>
   <div class="center-btn">
@@ -37,7 +38,7 @@
       <button class="toggle" id="invis" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;"> </button>
     </span>
     <span>
-      <button class="toggle" id="All_t" onclick=Toggle(4)>All Toggles</button>
+      <button class="toggle" id="All_t" onclick=Toggle(5)>All Toggles</button>
     </span>
     <span>
       <button class="toggle" id="invis" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;" > </button>
@@ -46,7 +47,10 @@
 
   <div class="center-btn">
     <span>
-      <button class="toggle" id="Academics" onclick=Toggle(1)>School</button>
+      <button class="toggle" id="Misc" onclick=Toggle(3)>Assembly</button>
+    </span>
+    <span>
+      <button class="toggle" id="Academics" onclick=Toggle(1)>Academic Support</button>
     </span>
     <span>
       <button class="toggle" id="Society Events" onclick=Toggle(0)>Society Events</button>
@@ -55,8 +59,9 @@
       <button class="toggle" id="Sports" onclick=Toggle(2)>Sports</button>
     </span>
     <span>
-      <button class="toggle" id="Misc" onclick=Toggle(3)>Assembly/ Misc.</button>
+      <button class="toggle" id="External" onclick=Toggle(4)>External Events</button>
     </span>
+
   </div>
   
     <table class="center-tbl" id=events-table>
