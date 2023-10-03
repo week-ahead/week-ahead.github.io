@@ -9,7 +9,7 @@ button{
   box-sizing: border-box;
   color: #333333;
   cursor: pointer;
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   list-style: none;
   height: 10%;
@@ -68,7 +68,7 @@ button{
 
 
 h1 {
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   font-weight: normal; 
   font-weight: normal; 
@@ -80,7 +80,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   font-size: 20px;
   color: #333333;
@@ -89,7 +89,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   font-size: 15px;
   color: #333333;
@@ -99,7 +99,7 @@ h3 {
 
 #daytext{
   height:100%;
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   color: #333333;
   text-align: center;
@@ -109,7 +109,7 @@ h3 {
 
 #gradetext{
   height:100%;
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   color: #333333;
   text-align: center;
@@ -119,7 +119,7 @@ h3 {
 
 #housetext{
   height:100%;
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   font-weight: normal; 
   color: #333333;
   text-align: center;
@@ -155,7 +155,7 @@ table {
 
 
 #events-table {
-  font-family: "Times New Roman";
+  font-family: "Comic Sans";
   border-collapse: collapse;
   width: 100%;
   padding: 20px;
