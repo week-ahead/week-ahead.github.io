@@ -165,6 +165,7 @@ table {
 }
 
 #events-table td, #events-table th {
+  border-collapse: collapse;
   border: 1px solid #000000;
   padding: 8px;
 }
