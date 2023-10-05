@@ -11,7 +11,7 @@ function mod(n, m) { // modulo function, finds the remainder, used to make sure 
   
 var tabletime = {}
 
-const TIMETABLE = {"Monday":[["06:40 am 07:20 am","Football Team Practice O Level Boys","College Section Field",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Basketball Team Practice O Level Girls","Basketball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Streeton vs. Papworth","Netball Court",["FY","SY","Papworth","Streeton","Sports"]],["07:30 am 07:45 am","School Assembly","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am 11:15 a","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:45 am 11:15 an","Urdu Society: Drama Auditions","Conference Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["10:45 am 11:15 am","Dramatica Society: Readers Theatre","Room S6, S7 &$8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Chemistry FYA1, A2 &A3]","Chemistry Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 01:45 pm","Distribution of CAIE Certificates MJ2023 FY Students (Last Year's XI)","Auditorium",["FY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 02:30 pm","US University Education Fair","Inner Courtyard",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Napier & Frere","College Section Field",["X","XI","FY","SY","Frere","Napier","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Streeton","Basketball Court",["FY","SY","Streeton","Sports"]],["02:00 pm 05:00 pm","GRAMMUN Day 1","LT, CR, AVR, Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Frere","Basketball Court",["FY","SY","Frere","Sports"]],["02:45 pm 03:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["04:00 pm 05:00 pm","Language Class for AICE Students","Online",["FY","SY","Frere","Napier","Papworth","Streeton","Academics"]]],"Tuesday":[["06:40 am 07:20 am","Football Team Practice A Level Boys","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Free vs. Napier","Netball Court",["FY","SY","Frere","Napier","Sports"]],["07:30 am 07:45 am","House Registration","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am 11:15 am","Urdu Society: Drama Auditions","Conference Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["10:45 am 11:15 am","Dramatica Society; Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Chemistry FYB1, B2 & B3]","Chemistry Lab ! 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 01:45 om","Distribution of CAIE Certificates MJ2023 Year XI (Last Year's X)","Auditorium",["XI","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 02:30 pm","Alumni Talks United States","Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","External"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Streeton & Papworth","College Section Field",["X","XI","FY","SY","Papworth","Streeton","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Papworth","Basketball Court",["FY","SY","Papworth","Sports"]],["02:00 pm 05:00 pm","GRAMMUNDay 2","LT, CR, VR, ICT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","External"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Napier","Basketball Court",["FY","SY","Napier","Sports"]],["02:45 pm 03:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Wednesday":[["06:40 am 07:20 am","Football Team Practice O Level Boys","College Section Field",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Basketball Team Practice O Level Girls","Basketball Court",["X","XI","Frere","Napier","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Streeton vs. Napier","Netball Court",["FY","SY","Napier","Streeton","Sports"]],["07:30 am 07:45 am","School Assembly","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 : 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:45 am – 11:15 am","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Biology FYCI, C2 & C3]","Biology Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Free & Papworth","College Section Field",["X","XI","FY","SY","Frere","Papworth","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Frere","Basketball Court",["FY","SY","Frere","Sports"]],["02:00 pm 05:00 pm","GRAMMUN Day 3","LT, CR, AVR, IT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Streeton","Basketball Court",["FY","SY","Streeton","Sports"]],["02:45 pm 03:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Thursday":[["06:40 am 07:20 am","Football Team Practice – A Level Boys","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Free vs. Papworth","Netball Court",["FY","SY","Frere","Papworth","Sports"]],["07:30 am 07:45 am","House Registration","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["12:00 pm 02:00","Practical [Biology FYD1 & D2]","Biology Lab 1 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 02:00 pm","Dramatica Society: Readers Theatre","Room S6, S7 &SS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["01:30 pm: 02:30 pm","Counselling Office: UCAS Statement","IT Lab",["FY","SY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 03:30 |","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Boys Swimming Class","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Napier & Streeton","College Section Field",["X","XI","FY","SY","Frere","Napier","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Napier","Basketball Court",["FY","SY","Napier","Sports"]],["02:00 pm 04:00 pm","KGS MTC (Mock Trial Competition)","CR, LT, AVR, Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Papworth","Basketball Court",["FY","SY","Papworth","Sports"]],["02:45 pm 03:30 pm","Girls Swimming Class","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Friday":[["06:40 am 07:20 am","Football Team Practice O & A Level Boy","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["07:30 am 07:55 am","Frere House Assembly","Auditorium",["X","XI","FY","SY","Frere","Misc"]],["07:30 am 07:55 am","Napier House Assembly","Outer Courtyard",["X","XI","FY","SY","Napier","Misc"]],["07:30 am 07:55 am","Papworth House Assembly","Inner Courtyard",["X","XI","FY","SY","Papworth","Misc"]],["07:30 am 07:55 am","Streeton House Assembly","Inner Courtyard",["X","XI","FY","SY","Streeton","Misc"]],["08:00 am 12:00 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:15 am 10:40 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:15 am 10:40 am","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 12:30 pm","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["02:00 pm 04:00 pm","KGS MTC (Mock Trial Competition)","IT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Society Events","Misc"]],["02:00 pm 06:00 pm","Friendly Cricket Match","Bahria College, Karsaz",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:30 pm 04:00 pm","Trials for Inter House Swimming","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Saturday":[["08:00 am 08:30 am","Inter-House Table Tennis Tournament Streeton vs. Frere","Table Tennis Arena",["X","XI","FY","SY","Frere","Streeton","Sports"]],["08:30 am 09:00 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Napier","Table Tennis Arena",["X","XI","Napier","Papworth","Sports"]],["09:00 am 09:30 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Frere","Table Tennis Arena",["X","XI","Frere","Papworth","Sports"]],["09:00 am 10:00 am","FY Counselling Meeting for Parents and Students","Auditorium",["FY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["10:30 am 11:15 am","Year X Counselling Meeting for Parents and Students","Auditorium",["X","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["09:45 am 10:15 am","Inter-House Table Tennis Tournament O Level Girls Streeton vs. Napier","Table Tennis Arena",["X","XI","Napier","Streeton","Sports"]],["10:15 am 10:45 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Streeton","Table Tennis Arena",["X","XI","Papworth","Streeton","Sports"]],["10:45 am 11:15 am","Inter-.House Table Tennis Tournament O Level Girls Napier vs. Frere","Table Tennis Arena",["X","XI","Frere","Napier","Sports"]]],"Sunday":[["03:00 pm 04:30 pm","Dramatica Theatre Society: Devised Theatre Workshop","Arts Council, Karachi",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events","Misc"]]]}
+const TIMETABLE = {"Monday":[["06:40 am 07:20 am","Football Team Practice O Level Boys","College Section Field",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Basketball Team Practice O Level Girls","Basketball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Streeton vs. Papworth","Netball Court",["FY","SY","Papworth","Streeton","Sports"]],["07:30 am 07:45 am","School Assembly","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am 11:15 a","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:45 am 11:15 an","Urdu Society: Drama Auditions","Conference Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["10:45 am 11:15 am","Dramatica Society: Readers Theatre","Room S6, S7 &$8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Chemistry FYA1, A2 &A3]","Chemistry Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 01:45 pm","Distribution of CAIE Certificates MJ2023 FY Students (Last Year's XI)","Auditorium",["FY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 02:30 pm","US University Education Fair","Inner Courtyard",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Napier & Frere","College Section Field",["X","XI","FY","SY","Frere","Napier","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Streeton","Basketball Court",["FY","SY","Streeton","Sports"]],["02:00 pm 05:00 pm","GRAMMUN Day 1","LT, CR, AVR, Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Frere","Basketball Court",["FY","SY","Frere","Sports"]],["02:45 pm 03:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["04:00 pm 05:00 pm","Language Class for AICE Students","Online",["FY","SY","Frere","Napier","Papworth","Streeton","Academics"]]],"Tuesday":[["06:40 am 07:20 am","Football Team Practice A Level Boys","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Free vs. Napier","Netball Court",["FY","SY","Frere","Napier","Sports"]],["07:30 am 07:45 am","House Registration","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am 11:15 am","Urdu Society: Drama Auditions","Conference Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["10:45 am 11:15 am","Dramatica Society; Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Chemistry FYB1, B2 & B3]","Chemistry Lab ! 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 01:45 om","Distribution of CAIE Certificates MJ2023 Year XI (Last Year's X)","Auditorium",["XI","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 02:30 pm","Alumni Talks United States","Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","External"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Streeton & Papworth","College Section Field",["X","XI","FY","SY","Papworth","Streeton","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Papworth","Basketball Court",["FY","SY","Papworth","Sports"]],["02:00 pm 05:00 pm","GRAMMUNDay 2","LT, CR, VR, ICT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Napier","Basketball Court",["FY","SY","Napier","Sports"]],["02:45 pm 03:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Wednesday":[["06:40 am 07:20 am","Football Team Practice O Level Boys","College Section Field",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Basketball Team Practice O Level Girls","Basketball Court",["X","XI","Frere","Napier","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Streeton vs. Napier","Netball Court",["FY","SY","Napier","Streeton","Sports"]],["07:30 am 07:45 am","School Assembly","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 : 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:45 am – 11:15 am","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 02:00 pm","Practical [Biology FYCI, C2 & C3]","Biology Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 03:30 pm","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Girls Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Free & Papworth","College Section Field",["X","XI","FY","SY","Frere","Papworth","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Frere","Basketball Court",["FY","SY","Frere","Sports"]],["02:00 pm 05:00 pm","GRAMMUN Day 3","LT, CR, AVR, IT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Streeton","Basketball Court",["FY","SY","Streeton","Sports"]],["02:45 pm 03:30 pm","Boys Swimming Classes","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Thursday":[["06:40 am 07:20 am","Football Team Practice – A Level Boys","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["06:40 am 07:20 am","Inter-House Netball Tournament A Level Girls Free vs. Papworth","Netball Court",["FY","SY","Frere","Papworth","Sports"]],["07:30 am 07:45 am","House Registration","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am 11:15 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["12:00 pm 02:00","Practical [Biology FYD1 & D2]","Biology Lab 1 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm 02:00 pm","Dramatica Society: Readers Theatre","Room S6, S7 &SS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["01:30 pm: 02:30 pm","Counselling Office: UCAS Statement","IT Lab",["FY","SY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["01:30 pm 03:30 |","Indoor Rowing","Gymnasium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Boys Swimming Class","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]],["01:45 pm 02:30 pm","Netball Team Practice O Level Girls","Netball Court",["X","XI","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:00 pm 02:45 pm","Inter House Football Trials A&O Level Girls Napier & Streeton","College Section Field",["X","XI","FY","SY","Frere","Napier","Sports"]],["02:00 pm 02:45 pm","Inter-House Basketball Trials A Level Boys Napier","Basketball Court",["FY","SY","Napier","Sports"]],["02:00 pm 04:00 pm","KGS MTC (Mock Trial Competition)","CR, LT, AVR, Meeting Room",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Sports","Society Events","Misc"]],["02:45 pm 03:30 pm","Inter-House Basketball Trials A Level Boys Papworth","Basketball Court",["FY","SY","Papworth","Sports"]],["02:45 pm 03:30 pm","Girls Swimming Class","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Friday":[["06:40 am 07:20 am","Football Team Practice O & A Level Boy","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["07:30 am 07:55 am","Frere House Assembly","Auditorium",["X","XI","FY","SY","Frere","Misc"]],["07:30 am 07:55 am","Napier House Assembly","Outer Courtyard",["X","XI","FY","SY","Napier","Misc"]],["07:30 am 07:55 am","Papworth House Assembly","Inner Courtyard",["X","XI","FY","SY","Papworth","Misc"]],["07:30 am 07:55 am","Streeton House Assembly","Inner Courtyard",["X","XI","FY","SY","Streeton","Misc"]],["08:00 am 12:00 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:15 am 10:40 am","Break","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Misc"]],["10:15 am 10:40 am","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["12:00 pm 12:30 pm","Dramatica Society: Readers Theatre","Room S6, S7 &S8",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["02:00 pm 04:00 pm","KGS MTC (Mock Trial Competition)","IT Lab",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics","Society Events","Misc"]],["02:00 pm 06:00 pm","Friendly Cricket Match","Bahria College, Karsaz",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Misc"]],["02:30 pm 04:00 pm","Trials for Inter House Swimming","Swimming Pool",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports","Society Events"]]],"Saturday":[["08:00 am 08:30 am","Inter-House Table Tennis Tournament Streeton vs. Frere","Table Tennis Arena",["X","XI","FY","SY","Frere","Streeton","Sports"]],["08:30 am 09:00 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Napier","Table Tennis Arena",["X","XI","Napier","Papworth","Sports"]],["09:00 am 09:30 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Frere","Table Tennis Arena",["X","XI","Frere","Papworth","Sports"]],["09:00 am 10:00 am","FY Counselling Meeting for Parents and Students","Auditorium",["FY","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["10:30 am 11:15 am","Year X Counselling Meeting for Parents and Students","Auditorium",["X","Frere","Napier","Papworth","Streeton","Academics","Misc"]],["09:45 am 10:15 am","Inter-House Table Tennis Tournament O Level Girls Streeton vs. Napier","Table Tennis Arena",["X","XI","Napier","Streeton","Sports"]],["10:15 am 10:45 am","Inter-House Table Tennis Tournament O Level Girls Papworth vs. Streeton","Table Tennis Arena",["X","XI","Papworth","Streeton","Sports"]],["10:45 am 11:15 am","Inter-.House Table Tennis Tournament O Level Girls Napier vs. Frere","Table Tennis Arena",["X","XI","Frere","Napier","Sports"]]],"Sunday":[["03:00 pm 04:30 pm","Dramatica Theatre Society: Devised Theatre Workshop","Arts Council, Karachi",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events","Misc"]]]}
 
 ;
 const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -47,6 +47,16 @@ var filtered_timetable = {
 "Saturday": [],
 "Sunday": []
 }
+
+var gague_timetable_timetable = {
+  "Monday": [],
+  "Tuesday": [],
+  "Wednesday": [],
+  "Thursday": [],
+  "Friday": [], 
+  "Saturday": [],
+  "Sunday": []
+  }
 
 
 function master_filter(tbl, type) {
@@ -133,9 +143,10 @@ function Add(day, clear) {
   var table = document.getElementById("table-body");
   var myStringArray = filtered_timetable[DAYS[day]];
   var arrayLength = myStringArray.length;
-  
+
   for (var i = 0; i < arrayLength; i++) {
-  
+    console.log("Init")
+    console.log(table.rows.length)
       var row = table.insertRow(table.rows.length);
   
       if (i == 0 && clear) { //For the day headings in All
@@ -163,8 +174,30 @@ function Add(day, clear) {
       cell2.style.background = TOGGLE_COLOR_MAP[myStringArray[i][3].filter(x => !GRADE_LIST.includes(x)).filter(x => !HOUSE_LIST.includes(x))[0]]; 
       cell3.style.background = TOGGLE_COLOR_MAP[myStringArray[i][3].filter(x => !GRADE_LIST.includes(x)).filter(x => !HOUSE_LIST.includes(x))[0]]; 
   }
+
+  
   selected_day = day; // So the rest of the code knows the day was shifted 
-  // External_check() 
+  
+  if (!clear || !External_check() ) {
+    console.log(table.rows.length)
+  if (table.rows.length==1 && filters.includes("External")){
+    filters = filters.concat(TOGGLES[0])
+    filters = filters.concat(TOGGLES[1])
+    filters = filters.concat(TOGGLES[2])
+    filters = filters.concat(TOGGLES[3])
+    filters = filters.concat(TOGGLES[5])
+    filters = filters.concat(TOGGLES[6])
+    filtered_timetable = master_filter(TIMETABLE, "house")
+    filtered_timetable = master_filter(filtered_timetable, "toggle")
+    filtered_timetable = master_filter(filtered_timetable, "grade")
+    Add(day, clear)
+    for (var i = 0; i < 6; i++) {
+      document.getElementById(TOGGLES[i]).style.backgroundColor=TOGGLE_COLORS[i] //Switches all toggles on, including top
+      document.getElementById("All_t").style.color = "#fefefe"
+
+    }
+      }
+    }
 }
 
 function All(a) {
@@ -197,7 +230,7 @@ function All(a) {
   document.getElementById("daytext").style.backgroundColor = COLORS[0] //Sets color of the day selector for All
   document.getElementById("day_lb").style.backgroundColor = COLORS[0]
   document.getElementById("day_rb").style.backgroundColor = COLORS[0]
-
+    External_check() 
 }
 
 function load() { //Triggered on page loading
@@ -241,6 +274,7 @@ function load() { //Triggered on page loading
   else {
   Add(selected_day)
   }
+  External_check() 
   
   
   document.getElementById("gradetext").style.backgroundColor = gCOLORS[grade]
@@ -372,21 +406,71 @@ else {
 }    
 }
 
-function External_check() {
 
-  console.log(filters)
+function observer_filter(tbl, type) {
+  var gague_timetable = {
+    "Monday": [],
+    "Tuesday": [],
+    "Wednesday": [],
+    "Thursday": [],
+    "Friday": [], 
+    "Saturday": [],
+    "Sunday": []
+  }
+  var GRADE_LIST = ["All_g","X", "XI", "FY", "SY"] //idek why this is needed, website breaks without it
+  
+  if (type == "toggle") {
+    toggle_filters = filters.filter(x => !HOUSE_LIST.includes(x)) // Removes all houses from the list so it only has toggles and grades
+    toggle_filters = toggle_filters.filter(x => !GRADE_LIST.includes(x)) // Removes all grades from the list so it only has toggles
+    var target = toggle_filters
+  }
+  
+  else if (type == "grade") {
+    var TOGGLES_LIST = ["Society Events", "Academics", "Sports", "Misc", "External", "Nullis"]
+    var grade_filters = filters.filter(x => !HOUSE_LIST.includes(x)) // Removes all houses from the list so it only has toggles and grades
+    grade_filters = grade_filters.filter(x => !TOGGLES_LIST.includes(x)) // Removes all toggles from the list so it only has grades
+    var target = grade_filters
+  
+    if (grade_filters.includes("All_g")) {
+        return tbl;
+    }
+  }
+  else if (type == "house") {
+    var TOGGLES_LIST = ["Society Events", "Academics", "Sports", "Misc", "External", "Nullis"]
+    var house_filters = filters.filter(x => !GRADE_LIST.includes(x)) // Removes all grades from filters so list only includes houses and toggles
+    house_filters = house_filters.filter(x => !TOGGLES_LIST.includes(x)) // Removes all toggles from filters so list only includes houses
+    var target = house_filters
+    if (house_filters.includes("All Houses")) {
+        return tbl; // Would change nothing if no houses filtered
+    }
+  }
+  
+  for (var i = 1; i < 8; i++) { // Removes all the events not for a specifc house
+    for (var j = 0; j < tbl[DAYS[i]].length; j++) {
+        var found = target.some(r => tbl[DAYS[i]][j][3].indexOf(r) >= 0)
+        if (found) {
+            gague_timetable[DAYS[i]] = gague_timetable[DAYS[i]].concat([tbl[DAYS[i]][j]])
+        }
+    }
+  }
+  
+  return gague_timetable
+  }
+
+  
+  
+function External_check() {
     var prefilters = filters
     filters = filters.filter(x => !TOGGLES.includes(x))
     filters = filters.concat(TOGGLES[4])
     
   
-  filtered_timetable = master_filter(TIMETABLE, "house")
-  filtered_timetable = master_filter(filtered_timetable, "grade")
-  filtered_timetable = master_filter(filtered_timetable, "toggle")
-  console.log("post-morten")
+  gague_timetable = observer_filter(TIMETABLE, "house")
+  gague_timetable = observer_filter(gague_timetable, "grade")
+  gague_timetable = observer_filter(gague_timetable, "toggle")
   
   if (selected_day == 0) {
-    if (filtered_timetable["Monday"].length != 0 || filtered_timetable["Tuesday"].length != 0 || filtered_timetable["Wednesday"].length != 0 || filtered_timetable["Thursday"].length != 0 || filtered_timetable["Friday"].length != 0 ||filtered_timetable["Saturday"].length != 0 || filtered_timetable["Sunday"].length != 0) {
+    if (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0 || gague_timetable["Sunday"].length != 0) {
       document.getElementById( 'External' ).style.display="inline"
       document.getElementById( 'exp' ).style.display="flex"
     }
@@ -396,7 +480,7 @@ function External_check() {
     }
   }
   else {
-    if (filtered_timetable[DAYS[selected_day]].length != 0) {
+    if (gague_timetable[DAYS[selected_day]].length != 0) {
       document.getElementById( 'External' ).style.display="inline"
       document.getElementById( 'exp' ).style.display="flex"
     }
@@ -405,4 +489,7 @@ function External_check() {
       document.getElementById( 'exp' ).style.display="none"
     }
   }    
+  filters = prefilters
+  present = (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0 || gague_timetable["Sunday"].length != 0)
+  return present
 }
