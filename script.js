@@ -177,6 +177,7 @@ function Add(day, clear) {
 
   
   selected_day = day; // So the rest of the code knows the day was shifted 
+
   
   if (!clear || !External_check() ) {
     console.log(table.rows.length)
@@ -198,6 +199,7 @@ function Add(day, clear) {
     }
       }
     }
+    External_check() 
 }
 
 function All(a) {
@@ -280,6 +282,7 @@ function load() { //Triggered on page loading
   document.getElementById("gradetext").style.backgroundColor = gCOLORS[grade]
   document.getElementById("grade_lb").style.backgroundColor = gCOLORS[grade]
   document.getElementById("grade_rb").style.backgroundColor = gCOLORS[grade]
+
 }
 
 
