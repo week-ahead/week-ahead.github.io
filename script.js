@@ -279,7 +279,8 @@ function load() { //Triggered on page loading
   document.getElementById("gradetext").style.backgroundColor = gCOLORS[grade]
   document.getElementById("grade_lb").style.backgroundColor = gCOLORS[grade]
   document.getElementById("grade_rb").style.backgroundColor = gCOLORS[grade]
-
+  document.getElementById( 'Asbly' ).style.display="none"
+  document.getElementById( 'Misc' ).style.display="none"
 }
 
 
