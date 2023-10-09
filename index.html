@@ -1,110 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta crset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Students' Week Ahead</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body onload="load()" class="body">
-    <img src="kgs-lion.png" id="kgs-lion" />
-    <h1>The Students' Week Ahead</h1>
-    <h3>By Fazl Rahman (FY-Z/S6)</h3>
-    <div class="center-btn">
-      <span>
-        <button class="left_arrow_btn" id="day_lb" onclick="Shift_Day(-1)">
-          <
-        </button>
-        <button id="daytext">All</button>
-        <button class="right_arrow_btn" id="day_rb" onclick="Shift_Day(1)">
-          >
-        </button>
-      </span>
-      <span>
-        <button class="left_arrow_btn" id="grade_lb" onclick="Shift_Grade(-1)">
-          <
-        </button>
-        <button id="gradetext">All Grades</button>
-        <button class="right_arrow_btn" id="grade_rb" onclick="Shift_Grade(1)">
-          >
-        </button>
-      </span>
-      <span>
-        <button class="left_arrow_btn" id="house_lb" onclick="Shift_House(-1)">
-          <
-        </button>
-        <button id="housetext">All Houses</button>
-        <button class="right_arrow_btn" id="house_rb" onclick="Shift_House(1)">
-          >
-        </button>
-      </span>
-    </div>
-    <h2 id="h2">Filters (Click to Toggle on/off)</h2>
-    <div class="center-btn">
-      <span>
-        <button
-          class="toggle"
-          id="invis"
-          style="
-            color: transparent;
-            background-color: transparent;
-            border-color: transparent;
-            cursor: default;
-          "
-        ></button>
-      </span>
-      <span>
-        <button class="toggle" id="All_t" onclick="Toggle(5)">
-          All Toggles
-        </button>
-      </span>
-      <span>
-        <button
-          class="toggle"
-          id="invis"
-          style="
-            color: transparent;
-            background-color: transparent;
-            border-color: transparent;
-            cursor: default;
-          "
-        ></button>
-      </span>
-    </div>
+<head>
+  <meta crset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students' Week Ahead</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="center-btn">
-      <span id="Asbly">
-        <button class="toggle" id="Misc" onclick="Toggle(3)">Assembly</button>
-      </span>
-      <span>
-        <button class="toggle" id="Academics" onclick="Toggle(1)">
-          Academic Support
-        </button>
-      </span>
-      <span>
-        <button class="toggle" id="Society Events" onclick="Toggle(0)">
-          Society Events
-        </button>
-      </span>
-      <span>
-        <button class="toggle" id="Sports" onclick="Toggle(2)">Sports</button>
-      </span>
-      <span id="exp">
-        <button class="toggle" id="External" onclick="Toggle(4)">
-          External Events
-        </button>
-      </span>
-    </div>
+<body onload="load()" class="body">
+  <img src = "lion.png" style = "display:block; margin-left: auto; margin-right: auto; height: 150px; padding: 20px">
+  <h1 id="h1">The Students' Week Ahead</h1>
+  <h3 id="h3">By Fazl Rahman (FY-Z/S6)</h3>
+  <div class="center-btn">
+    <span>
+      <button class="left_arrow_btn" id="day_lb" onclick=Shift_Day(-1)><</button><!--
+      --><button id="daytext">All</button><!--
+      --><button class="right_arrow_btn" id="day_rb" onclick=Shift_Day(1)>></button>
+    </span>
+    <span>
+      <button class="left_arrow_btn" id="grade_lb" onclick=Shift_Grade(-1)><</button><!--
+      --><button id="gradetext">All Grades</button><!--
+      --><button class="right_arrow_btn" id="grade_rb" onclick=Shift_Grade(1)>></button>
+    </span>
+    <span>
+      <button class="left_arrow_btn" id="house_lb" onclick=Shift_House(-1)><</button><!--
+      --><button  id="housetext">All Houses</button><!--
+      --><button class="right_arrow_btn" id="house_rb" onclick=Shift_House(1)>></button>
+    </span>
+  </div>
+  <h2 id="h2">Filters (Click to Toggle on/off)</h2>
+  <div class="center-btn">
+    <span>
+      <button class="toggle" id="invis" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;"> </button>
+    </span>
+    <span>
+      <button class="toggle" id="All_t" onclick=Toggle(5)>All Toggles</button>
+    </span>
+    <span>
+      <button class="toggle" id="invis" style="color: transparent; background-color: transparent; border-color: transparent; cursor: default;" > </button>
+    </span>
+  </div>
 
-    <table class="center-tbl" id="events-table">
+  <div class="center-btn">
+    <span id="Asbly">
+      <button class="toggle" id="Misc" onclick=Toggle(3)>Assembly</button>
+    </span>
+    <span>
+      <button class="toggle" id="Academics" onclick=Toggle(1)>Academic Support</button>
+    </span>
+    <span>
+      <button class="toggle" id="Society Events" onclick=Toggle(0)>Society Events</button>
+    </span>
+    <span>
+      <button class="toggle" id="Sports" onclick=Toggle(2)>Sports</button>
+    </span>
+    <span id="exp">
+      <button class="toggle" id="External" onclick=Toggle(4)>External Events</button>
+    </span>
+
+  </div>
+  
+    <table class="center-tbl" id=events-table>
+
       <tbody id="table-body">
-        <tr></tr>
+        <tr>
+        </tr>
       </tbody>
     </table>
-  </body>
+  </div>
+
+  </div>
+
+</body>
+
 </html>
