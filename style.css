@@ -4,10 +4,9 @@
 
 #kgs-lion {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   height: 150px;
-  padding: 20px
+  padding: 20px;
+  margin: auto;
 }
 
 button {
@@ -78,13 +77,11 @@ button {
 h1 {
   font-family: "Times New Roman";
   font-weight: normal;
-  font-weight: normal;
-  font-weight: normal;
   font-size: 40px;
   color: #333333;
   text-align: center;
-  margin: 5px;
-  margin-top: 0px
+  margin: auto;
+  width: fit-content;
 }
 
 h2 {
@@ -101,7 +98,8 @@ h3 {
   font-size: 15px;
   color: #333333;
   text-align: center;
-  margin: 0px
+  margin: auto;
+  width: fit-content;
 }
 
 #daytext {
