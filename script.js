@@ -1,11 +1,8 @@
-//$.getJSON("https://bad-at-naming.github.io/Schedule-Displayer/timetable.json", load); 
 
-function mod(n, m) { // modulo function, finds the remainder, used to make sure the top three 'selectors' loop back to all from the last option
-  return ((n % m) + m) % m;
-}
-
-
-function mod(n, m) { // modulo function, finds the remainder, used to make sure the top three 'selectors' loop back to all from the last option
+function mod(n, m) {
+  /**
+   * @description  modulo function, finds the remainder, used to make sure the top three 'selectors' loop back to all from the last option
+   */
   return ((n % m) + m) % m;
 }
 
