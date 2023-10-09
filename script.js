@@ -127,8 +127,8 @@ function Add(day, clear) {
     var cell20 = row.insertCell(1);
     var cell30 = row.insertCell(2);
 
-    cell10.innerHTML = "Event"; //Changed
-    cell20.innerHTML = "Time";
+    cell20.innerHTML = "Event"; //Changed
+    cell10.innerHTML = "Time";
     cell30.innerHTML = "Location";
     document.getElementById("daytext").style.backgroundColor = COLORS[day] //Sets color of the day selector
     document.getElementById("day_lb").style.backgroundColor = COLORS[day]
@@ -216,8 +216,8 @@ function All(a) {
   var cell4 = row.insertCell(3);
 
   cell1.innerHTML = "Day";
-  cell3.innerHTML = "Time";
-  cell2.innerHTML = "Event";
+  cell2.innerHTML = "Time";
+  cell3.innerHTML = "Event";
   cell4.innerHTML = "Location";
 
   for (var i = 1; i < 7; i++) {
