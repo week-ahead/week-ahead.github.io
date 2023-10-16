@@ -91,14 +91,27 @@ h2 {
 h3 {
   font-family: "Times New Roman";
   font-weight: normal; 
-  font-size: 15px;
+  font-size: 20px;
   color: #333333;
   text-align: center;
   margin: 0px
 }
 #Event-Tbl{
-  width:65%
+  width:65%;
+  font-size:20px
 }
+
+#Time-Tbl{
+  width:30%;
+  font-size:16px
+}
+
+
+#Loc-Tbl{
+  width:5%;
+  font-size:16px
+}
+
 #daytext{
   height:100%;
   font-family: "Times New Roman";
