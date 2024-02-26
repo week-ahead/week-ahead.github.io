@@ -6,12 +6,12 @@ function mod(n, m) { // modulo function, finds the remainder, used to make sure 
   
 var tabletime = {}
 
-const TIMETABLE ={"Monday":[["","Test Week for the Second Term begins for Year X & XI","",["X","XI","Frere","Napier","Papworth","Streeton","Nullis"]],["06:45 am – 07:30 am","Athletics Events (Final) – O Level Boys & Girls","College Section Field",["X","XI","Frere","Napier","Papworth","Streeton","Sports"]],["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am – 11:15 am","Athletics Events (Final) – A Level Boys & Girls","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["10:45 am – 11:15 am","Sports Day Preparation & PE Display Practice - Frere House","Auditorium",["X","XI","FY","SY","Frere","Sports","Nullis"]],["12:00 pm – 02:00 pm","Practical [Chemistry FYA1, A2 &A3]","Chemistry Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:30 pm – 03:00 pm","Sports Day Preparation & PE Display Practice - Frere House","Teaching Hall",["X","XI","FY","SY","Frere","Sports"]],["01:30 pm – 03:30 pm","Dramatica Society: Play Rehearsal","Auditorium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["01:45 pm – 02:45 pm","O Level Preparatory Class: PS History","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["03:30 pm – 05:00 pm","Sports Day Rally 2024 - Strapworth vs Frapier","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]]],"Tuesday":[["06:45 am – 07:30 am","Athletics Events (Final) – O &A Level Girls","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am – 11:15 am","Athletics Events (Final) – O &A Level Boys","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["10:45 am – 11:15 am","Sports Day Preparation & PE Display Practice - Frere House","Auditorium",["X","XI","FY","SY","Frere","Sports","Nullis"]],["12:00 pm – 02:00 pm","Practical [Chemistry FYB1, B2 & B3]","Chemistry Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:30 pm – 03:00 pm","Sports Day Preparation & PE Display Practice - Frere House","Teaching Hall",["X","XI","FY","SY","Frere","Sports"]],["01:45 pm – 02:45 pm","O Level Preparatory Class: PS Geography","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["02:00 pm – 03:30 pm","Sports Day Rehearsal","College Section Field",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]]],"Wednesday":[["06:45 am – 07:30 am","Athletics Events (1500 M) – A Level Boys","College Section Field",["FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am – 11:15 am","Sports Day Preparation & PE Display Practice - Frere House","Auditorium",["X","XI","FY","SY","Frere","Sports","Nullis"]],["12:00 pm – 02:00 pm","Practical [Biology FYC1, C2 &C3]","Biology Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:30 pm – 03:00 pm","Sports Day Preparation & PE Display Practice - Frere House","Teaching Hall",["X","XI","FY","SY","Frere","Sports"]],["01:30 pm – 03:30 pm","Dramatica Society: Play Rehearsal","Auditorium",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]],["01:45 pm – 03:15 pm","O Level Preparatory Class: Islamiyat","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["04:30 pm - 06:30 pm","Capture the Flag - SYs","College Section",["SY","Frere","Napier","Papworth","Streeton","Nullis"]]],"Thursday":[["","Last Day of the Test Week for Year XI","",["X","XI","Frere","Napier","Papworth","Streeton","Nullis"]],["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["10:45 am – 11:15 am","Sports Day Preparation & PE Display Practice - Frere House","Auditorium",["X","XI","FY","SY","Frere","Sports","Nullis"]],["12:00 pm – 02:00 pm","Practical [Biology FYD1 &D2]","Biology Lab 1 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:30 pm – 03:00 pm","Sports Day Preparation & PE Display Practice - Frere House","Teaching Hall",["X","XI","FY","SY","Frere","Sports"]],["01:45 pm – 02:15 pm","Extra Class: Biology [XI-A2]","Bio Lab 2",["XI","Frere","Napier","Papworth","Streeton","Academics"]],["01:45 pm – 03:15 pm","O Level Preparatory Class: Islamiyat","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]]],"Friday":[["07:00 am – 11:00 am","Sports Day 2024 🏅","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]]],"Saturday":[["08:00 am – 12:00 pm","Dramatica Society: Play Rehearsal","Auditorium, Teaching Hall",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]]],"Sunday":[]}
+const TIMETABLE ={"Monday":[["","Holiday – Shab e Barat","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]]],"Tuesday":[["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:45 pm – 02:45 pm","O Level Preparatory Class: PS Geography","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["03:00 pm – 05:00 pm","PTMs: Year XI & FY","Auditorium",["XI","FY","Frere","Napier","Papworth","Streeton","Academics"]]],"Wednesday":[["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["12:00 pm – 02:00 pm","Practical [Biology FYC1, C2 &C3]","Biology Lab 1, 2 &3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:30 pm – 02:30 pm","O Level Preparatory Class: Islamiyat","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["02:30 pm – 05:00 pm","PTMs: Year X & SY","Auditorium & Library",["X","SY","Frere","Napier","Papworth","Streeton","Academics"]],["06:45 pm – 08:45 pm","DramaFest Rehearsal","Auditorium",["FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]]],"Thursday":[["07:25 am – 07:45 am","Chemistry Quiz: XI A-1 & A-2","Chemistry Lab 1",["XI","Frere","Napier","Papworth","Streeton","Academics"]],["07:25 am – 07:45 am","Chemistry Quiz: XI B-1 & B-2","Chemistry Lab 2",["XI","Frere","Napier","Papworth","Streeton","Academics"]],["07:25 am – 07:45 am","Chemistry Quiz: XI C","Chemistry Room 4",["XI","Frere","Napier","Papworth","Streeton","Academics"]],["07:25 am – 07:45 am","Chemistry Quiz: XI D-1 & D-2","Chemistry Room 5",["XI","Frere","Napier","Papworth","Streeton","Academics"]],["07:45 am – 01:30 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:45 am – 11:15 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["12:00 pm – 02:00 pm","Practical [Biology FYD1 &D2]","Biology Lab 1 & 3",["FY","Frere","Napier","Papworth","Streeton","Academics"]],["01:30 pm – 03:00 pm","Indoor Rowing","Gymnasium, CS",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Sports"]],["01:45 pm – 03:15 pm","O Level Preparatory Class: Islamiyat","Conference Room",["X","Frere","Napier","Papworth","Streeton","Academics"]],["06:45 pm – 08:45 pm","KGS Annual Drama Festival: She Stoops To Conquer","Auditorium",["FY","SY","Frere","Napier","Papworth","Streeton","Society Events"]]],"Friday":[["07:30 am – 08:00 am","House Assemblies Frere","Lecture Theatre",["X","XI","FY","SY","Frere","Misc"]],["07:30 am – 08:00 am","House Assemblies Papworth","Inner Courtyard",["X","XI","FY","SY","Papworth","Misc"]],["07:30 am – 08:00 am","House Assemblies Streeton","Inner Courtyard",["X","XI","FY","SY","Streeton","Misc"]],["07:30 am – 08:00 am","House Assemblies Napier","AV Room",["X","XI","FY","SY","Napier","Misc"]],["08:00 am – 12:00 pm","Classes","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]],["10:15 am – 10:40 am","Break","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]],["06:30 pm – 10:00 pm","Farewell for the Class of 2024 🎊🎉","Inner Courtyard",["FY","SY","Frere","Napier","Papworth","Streeton","Nullis"]]],"Saturday":[["","School Day According to Special Timetable including Chemistry Practical","",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","Academics"]]],"Sunday":[["08:00 am – 09:30 am","OGS Bike Ride","College Section",["X","XI","FY","SY","Frere","Napier","Papworth","Streeton","External"]]]}
 const TOGGLE_COLORS = ["#d9ffc9", "#ff9e94","#b3d4e6", "#fff396", "#999999", "#1a143b"]
 const TOGGLES = ["Society Events", "Academics", "Sports", "Misc", "External", "All_t", "Nullis"]
 const GRADE_LIST = ["All_g","X", "XI", "FY", "SY"]
 const HOUSE_LIST = ["All Houses", "Frere", "Napier", "Papworth", "Streeton"]
-const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const DAYS = ["All", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 const COLORS = ["#a9a9eb", "#dba2c6", "#d69696", "#f5a97d", "#fcd2a7",    "#f7d8c5", "#a57555", "#9ff4dc"];
 const gCOLORS = ["#ffa455", "#ffdb5d", "#c6d6a7", "#b64b1d","#431d40" ]//Grade Colors
 const hCOLORS = ["#d6b983", "#e08580", "#6f7bcb", "#a4dff8", "#86b588"] //House Colors
@@ -38,6 +38,7 @@ var filtered_timetable = {
 "Thursday": [],
 "Friday": [], 
 "Saturday": [],
+"Sunday": [],
 }
 
 var gague_timetable_timetable = {
@@ -47,6 +48,7 @@ var gague_timetable_timetable = {
   "Thursday": [],
   "Friday": [], 
   "Saturday": [],
+  "Sunday": [],
   }
 
 
@@ -58,6 +60,7 @@ var filtered_timetable = {
   "Thursday": [],
   "Friday": [], 
   "Saturday": [],
+  "Sunday": [],
 }
 var GRADE_LIST = ["All_g","X", "XI", "FY", "SY"] //idek why this is needed, website breaks without it
 
@@ -87,7 +90,7 @@ else if (type == "house") {
   }
 }
 
-for (var i = 1; i < 7; i++) { // Removes all the events not for a specifc house
+for (var i = 1; i < 8; i++) { // Removes all the events not for a specifc house
   for (var j = 0; j < tbl[DAYS[i]].length; j++) {
       var found = target.some(r => tbl[DAYS[i]][j][3].indexOf(r) >= 0)
       if (found) {
@@ -233,7 +236,7 @@ function All(a) {
   cell3.innerHTML = "Event";
   cell4.innerHTML = "Location";
   
-  for (var i = 1; i < 7; i++) {
+  for (var i = 1; i < 8; i++) {
       Add(i, true); //True means the days will not be cleared
   }
 
@@ -301,7 +304,7 @@ function load() { //Triggered on page loading
 function Shift_Day(a) {
 var day = selected_day
 day += a
-day = mod(day,7)
+day = mod(day,8)
 if (day == 0) {
   All(0)
 }
@@ -430,6 +433,7 @@ function observer_filter(tbl, type) {
     "Thursday": [],
     "Friday": [], 
     "Saturday": [],
+    "Sunday": [],
   }
   var GRADE_LIST = ["All_g","X", "XI", "FY", "SY"] //idek why this is needed, website breaks without it
   
@@ -459,7 +463,7 @@ function observer_filter(tbl, type) {
     }
   }
   
-  for (var i = 1; i < 7; i++) { // Removes all the events not for a specifc house
+  for (var i = 1; i < 8; i++) { // Removes all the events not for a specifc house
     for (var j = 0; j < tbl[DAYS[i]].length; j++) {
         var found = target.some(r => tbl[DAYS[i]][j][3].indexOf(r) >= 0)
         if (found) {
@@ -484,7 +488,7 @@ function External_check() {
   gague_timetable = observer_filter(gague_timetable, "toggle")
   
   if (selected_day == 0) {
-    if (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0) {
+    if (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0 ||gague_timetable["Sunday"].length != 0) {
       document.getElementById( 'External' ).style.display="inline"
       document.getElementById( 'exp' ).style.display="flex"
     }
@@ -504,7 +508,7 @@ function External_check() {
     }
   }    
   filters = prefilters
-  present = (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0
+  present = (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0 ||gague_timetable["Sunday"].length != 0
   )
   return present
 }
@@ -521,7 +525,7 @@ gague_timetable = observer_filter(gague_timetable, "toggle")
 
 if (selected_day == 0) {
 
-  if (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0) {
+  if (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0||gague_timetable["Sunday"].length != 0) {
     document.getElementById( 'Asbly' ).style.display="flex"
     document.getElementById( 'Misc' ).style.display="inline"
 
@@ -543,7 +547,7 @@ else {
   }
 }    
 filters = prefilters
-present = (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0
+present = (gague_timetable["Monday"].length != 0 || gague_timetable["Tuesday"].length != 0 || gague_timetable["Wednesday"].length != 0 || gague_timetable["Thursday"].length != 0 || gague_timetable["Friday"].length != 0 ||gague_timetable["Saturday"].length != 0 ||gague_timetable["Sunday"].length != 0
 )
 return present
 }
