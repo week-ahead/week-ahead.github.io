@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>The Students' Week Ahead</title>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
+        <link
+            rel="stylesheet"
+            href="{{url_for('static', filename='style.css')}}"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script>
+            function addDarkmodeWidget() {
+                new Darkmode().showWidget();
+            }
+            window.addEventListener("load", addDarkmodeWidget);
+        </script>
+    </head>
+    <body onload="load()">
+        <div class="container">
+            <h1>The Students' Week Ahead</h1>
+
+            <div class="controls">
+                <div class="control-group">
+                    <button
+                        id="day_lb"
+                        class="left_arrow_btn"
+                        onclick="Shift_Day(-1)"
+                    >
+                        &lt;
+                    </button>
+                    <button id="daytext">All</button>
+                    <button
+                        id="day_rb"
+                        class="right_arrow_btn"
+                        onclick="Shift_Day(1)"
+                    >
+                        &gt;
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button
+                        id="grade_lb"
+                        class="left_arrow_btn"
+                        onclick="Shift_Grade(-1)"
+                    >
+                        &lt;
+                    </button>
+                    <button id="gradetext">All Grades</button>
+                    <button
+                        id="grade_rb"
+                        class="right_arrow_btn"
+                        onclick="Shift_Grade(1)"
+                    >
+                        &gt;
+                    </button>
+                </div>
+
+                <div class="control-group">
+                    <button
+                        id="house_lb"
+                        class="left_arrow_btn"
+                        onclick="Shift_House(-1)"
+                    >
+                        &lt;
+                    </button>
+                    <button id="housetext">All Houses</button>
+                    <button
+                        id="house_rb"
+                        class="right_arrow_btn"
+                        onclick="Shift_House(1)"
+                    >
+                        &gt;
+                    </button>
+                </div>
+            </div>
+
+            <h2>Filters (Click to Enable)</h2>
+
+            <div class="filters">
+                <button id="All_t" class="toggle" onclick="Toggle(4)">
+                    All Toggles
+                </button>
+                <button id="Academics" class="toggle" onclick="Toggle(1)">
+                    Academics
+                </button>
+                <button id="Society Events" class="toggle" onclick="Toggle(0)">
+                    Society Events
+                </button>
+                <button id="Sports" class="toggle" onclick="Toggle(2)">
+                    Sports
+                </button>
+                <button id="Misc" class="toggle" onclick="Toggle(3)">
+                    Misc.
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead id="table-head"></thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

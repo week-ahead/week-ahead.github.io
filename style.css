@@ -1,201 +1,133 @@
-.body{
-  background-color: #fefefe;
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 21.8px; /* Increased from 16px (default) */
 }
-
-button{
-  text-align: center;
-  vertical-align: middle;
-  border-style: none;
-  box-sizing: border-box;
-  color: #333333;
-  cursor: pointer;
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  list-style: none;
-  height: 10%;
-  text-decoration: none;
-  transition: color 100ms;
-  user-select: none;
-  padding-top: 5px;
-  padding-bottom:5px;
+.container {
+    background-color: #ffffff;
+    border-radius: 16px; /* Increased from 10px */
+    box-shadow: 0 0 29px rgba(0, 0, 0, 0.1); /* Increased from 20px */
+    padding: 42px; /* Increased from 30px */
+    max-width: 1180px; /* Increased from 800px */
+    width: 95%;
 }
-
-.toggle {
-  height:100%;
-  width:60%;
-  margin-left: 5%;
-  border-bottom-left-radius: 13px;
-  border-top-left-radius: 13px;
-  text-align:center;
-  margin-right: 5%;
-  border-bottom-right-radius: 13px;
-  border-top-right-radius: 13px;
-  color: #333333;
-  flex-grow:10;
-  flex-shrink:2.5
-}
-
-
-
-.left_arrow_btn{
-  height:100%;
-  width:40%;
-  margin-left: 5%;
-  padding: 2px;
-  border-bottom-left-radius: 13px;
-  font-size: 115%;
-  border-top-left-radius: 13px;
-  margin: auto;
-  flex-grow:4;
-  flex-shrink:1;
-  text-align: center;
-}
-
-
-.right_arrow_btn{
-  height:100%;
-  width:40%;
-  padding: 2px;
-  font-size: 115%;
-  margin: auto;
-  margin-right: 5%;
-  border-bottom-right-radius: 13px;
-  border-top-right-radius: 13px;
-  flex-grow:4;
-  flex-shrink:1;
-  text-align: center;
-}
-
-
-h1 {
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  font-weight: normal; 
-  font-weight: normal; 
-  font-size: 40px;
-  color: #333333;
-  text-align: center;
-  margin: 5px;
-  margin-top: 0px
-}
-
+h1,
 h2 {
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  font-size: 20px;
-  color: #333333;
-  text-align: center
-
+    text-align: center;
+    color: #333;
 }
-
-h3 {
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  font-size: 20px;
-  color: #333333;
-  text-align: center;
-  margin: 0px
+h1 {
+    font-size: 32.2px; /* Increased from 24px */
+    margin-bottom: 29px; /* Increased from 20px */
 }
-#Event-Tbl{
-  width:65%;
-  font-size:20px
+h2 {
+    font-size: 26.8px; /* Increased from 18px */
+    margin-top: 42px; /* Increased from 30px */
+    margin-bottom: 21.5px; /* Increased from 15px */
 }
-
-#Time-Tbl{
-  width:30%;
-  font-size:16px
+.controls,
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Increased from 10px */
+    margin-bottom: 29px; /* Increased from 20px */
 }
-
-
-#Loc-Tbl{
-  width:5%;
-  font-size:16px
+.control-group {
+    display: flex;
+    gap: 7.5px; /* Increased from 5px */
 }
-
-#daytext{
-  height:100%;
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  color: #333333;
-  text-align: center;
-  flex-grow:10;
-  flex-shrink:10;
+button {
+    font-family: inherit;
+    font-size: 20.2px; /* Increased from 14px */
+    padding: 16px 21.5px; /* Increased from 10px 15px */
+    border: none;
+    border-radius: 7.5px; /* Increased from 5px */
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        transform 0.1s;
 }
-
-#gradetext{
-  height:100%;
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  color: #333333;
-  text-align: center;
-  flex-grow:10;
-  flex-shrink:10
+button:hover {
+    transform: translateY(-2.9px); /* Increased from -2px */
 }
-
-#housetext{
-  height:100%;
-  font-family: "Times New Roman";
-  font-weight: normal; 
-  color: #333333;
-  text-align: center;
-  flex-grow:10;
-  flex-shrink:2.5
+.left_arrow_btn,
+.right_arrow_btn {
+    background-color: #f0f0f0;
+    color: #333;
 }
-
-span{
-  width:60%;
-  display:flex;
-  flex-grow:1;
-  flex-shrink: 1;
+#daytext,
+#gradetext,
+#housetext {
+    min-width: 186px; /* Increased from 120px */
 }
-  
-.center-btn{
-  margin-top:10px;
-  margin-bottom:10px;
-  display:flex;
+.toggle {
+    background-color: #cccccc;
+    color: #333;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
-
-.center-tbl{
-  margin-top:10px;
-  margin-bottom:10px;
-  margin-left:auto;
-  margin-right:auto;
+.toggle.selected {
+    color: #fff;
 }
-
+#Society\ Events.selected {
+    background-color: #50257a;
+}
+#Academics.selected {
+    background-color: #cd0001;
+}
+#Sports.selected {
+    background-color: #1a16ae;
+}
+#Misc.selected {
+    background-color: #924305;
+}
+#All_t.selected {
+    background-color: #1a143b;
+}
+#All_t {
+    background-color: #1a143b;
+    color: #fff;
+}
+.table-container {
+    overflow-x: auto;
+}
 table {
-  width:95%;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 31px; /* Increased from 20px */
 }
-
-/*OPPSETT AV TOP, TOPNAV, SIDENAV, MAIN, RIGHT OG FOOTER:*/
-
-#table-body {
-  table-layout: fixed;
-  width: 100%;
+th,
+td {
+    border: 1.6px solid #ddd; /* Increased from 1px */
+    padding: 18.9px; /* Increased from 12px */
+    text-align: left;
 }
-
-#events-table {
-  font-family: "Times New Roman";
-  border-collapse: collapse;
-  width: 100%;
-  padding: 20px;
-  color: #333333;
-  text-align: center;
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
-
-#events-table td, #events-table th {
-  border: 1px solid #000000;
-  padding: 8px;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
-
-.firstrow {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: #ebebeb;
-  color: #333333;}
-
-.distance-from-sides {
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom:10px;
+@media (max-width: 600px) {
+    .container {
+        padding: 29px; /* Increased from 20px */
+    }
+    button {
+        font-size: 18.9px; /* Increased from 12px */
+        padding: 12.4px 18.6px; /* Increased from 8px 12px */
+    }
+    #daytext,
+    #gradetext,
+    #housetext {
+        min-width: 160px; /* Increased from 100px */
+    }
 }
